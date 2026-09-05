@@ -372,6 +372,8 @@ nav a:hover,
 
     inset: 0;
 
+    pointer-events: none;
+
     opacity: .05;
 
     background-image:
@@ -1685,6 +1687,9 @@ body.dark .updates-box {
 
     position:
         absolute;
+
+    pointer-events:
+        none;
 
     right:
         -80px;
