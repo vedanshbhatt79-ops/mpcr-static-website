@@ -1,3 +1,5 @@
+import LiveAarti from './LiveAarti.jsx'
+
 const socials = [
   {
     href: 'https://www.instagram.com/modiparkcharaja',
@@ -36,6 +38,8 @@ export default function Social() {
         </h2>
         <p>Stay updated with announcements, photos and videos.</p>
       </div>
+
+      <LiveAarti />
 
       <div className="social-grid">
         {socials.map((social) => (
