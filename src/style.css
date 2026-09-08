@@ -3406,3 +3406,178 @@ footer {
     cursor: pointer;
 
 }
+
+
+/* =====================================================
+   AUTH / LOGIN
+===================================================== */
+
+.auth-page {
+
+    min-height: calc(100vh - 200px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 24px;
+
+}
+
+.auth-card {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 40px 36px;
+
+    box-shadow: var(--shadow);
+
+}
+
+.auth-title {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    margin-bottom: 8px;
+
+    text-align: center;
+
+}
+
+.auth-subtitle {
+
+    color: var(--muted);
+
+    text-align: center;
+
+    margin-bottom: 28px;
+
+}
+
+.auth-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.auth-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.auth-field label {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+}
+
+.auth-field input {
+
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color .3s, box-shadow .3s;
+
+    font-family: 'DM Sans', sans-serif;
+
+    box-sizing: border-box;
+
+}
+
+.auth-field input::placeholder {
+
+    color: var(--muted);
+
+}
+
+.auth-field input:focus {
+
+    border-color: var(--purple);
+
+    box-shadow: 0 0 0 3px rgba(122,95,168,.15);
+
+}
+
+.auth-error {
+
+    color: var(--coral);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+.auth-submit {
+
+    width: 100%;
+
+    cursor: pointer;
+
+    margin-top: 4px;
+
+}
+
+.auth-submit:disabled {
+
+    opacity: .7;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+body.dark .auth-card {
+
+    background: var(--navy2);
+
+}
+
+body.dark .auth-field input {
+
+    background: var(--navy);
+
+}

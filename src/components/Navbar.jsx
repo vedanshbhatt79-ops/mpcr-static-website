@@ -7,6 +7,7 @@ const links = [
   { to: '/aarti', label: 'Aarti' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/social', label: 'Social' },
+  { to: '/login', label: 'Login' },
 ]
 
 export default function Navbar({ theme, onToggleTheme }) {
