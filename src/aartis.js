@@ -397,40 +397,6 @@ const aartis = [
     ],
   },
   {
-    titleEnglish:
-      "Nache Ganesh Ne Nache Hanuman – Agad Bam (Narsinh Mehta Bhajan)",
-    original: [
-      "Nache Ganesha Ne Nache Hanuman (2), Parvatina PraanNath Bhola Bhagwaan.",
-      "Agad Bam, Agad Bam, Daak Vaagey Damru, Nache Sadashiv Aagey Bhairu (2)",
-      "Bhaang Vavi, Bholanath Aye Ninde Che Ganesh (2), ParvatiJi Pani Vaaley Chuta Meli Kesh.",
-      "Aey Bhaang Kera Rotla Ne Dhatura Nu Shaak (2), Pirse Maiya Parvati Ne Jamey Bholanath.",
-      "Haath Lishi Bhabhuti Ne Chole Che Ang (2), Dekho Maiya Parvati Ji, Keso Bhayo Rang.",
-      "Naag Kera Bajubandh, Naag Kero Haar (2), Naagin Na Shringaar, Sohave Bholanath.",
-      "Koi Pujave Ang, Baba Koi Pujave Pag (2), Narshi Mehta Puje, Apuj Ling.",
-      "Maadi Ramey Garba, Ne Radha Ramey Raas (2), Bholanath Khijey Karey Tandav Naach.",
-    ],
-    marathi: [
-      "गणेश नाचते हैं, हनुमान भी नाचते हैं, पार्वती के प्राणनाथ भोले भगवान भी नाचते हैं।",
-      "अगड़ बम, अगड़ बम, डमरू बजता है; सदाशिव के आगे भैरव नाचते हैं।",
-      "भांग पीकर भोलानाथ झूमते हैं, गणेश उन्हें छेड़ते हुए टोकते हैं; पार्वती जी बाल खुले छोड़कर पानी भरने जाती हैं।",
-      "भांग की रोटी और धतूरे की सब्ज़ी — माता पार्वती परोसती हैं और भोलानाथ खाते हैं।",
-      "हाथ में भभूति लेकर वे शरीर पर मलते हैं; देखो माता पार्वती जी, कैसा रंग चढ़ गया है!",
-      "नाग का बाजूबंद, नाग का हार, नागिन का श्रृंगार — यही भोलानाथ को शोभा देता है।",
-      "कोई उनके अंग की पूजा करता है, कोई चरणों की; नरसी मेहता तो उस निराकार, अपूज्य लिंग की ही पूजा करते हैं।",
-      "माता गरबा खेलती हैं, राधा रास रचाती हैं; भोलानाथ रुष्ट होकर तांडव नृत्य करते हैं।",
-    ],
-    english: [
-      "Ganesha dances, Hanuman dances too — and so does Bhola Bhagwan, the beloved lord of Parvati.",
-      "Agad Bam, Agad Bam — the damru drum resounds; Bhairav dances before Sadashiv.",
-      "Having drunk bhang, Bholanath sways; Ganesha teasingly scolds him, while Parvati goes to fetch water with her hair let loose.",
-      "Bread made with bhang and a curry of dhatura (thorn-apple) — Mother Parvati serves it, and Bholanath eats.",
-      "Taking sacred ash in hand, he smears it over his body; behold, Mother Parvati, what a hue it has taken on!",
-      "Serpents form his armlets, serpents form his necklace — adorned with serpent ornaments, Bholanath looks resplendent.",
-      "Some worship his form, some worship his feet — but Narsi Mehta worships the formless, unadorned Linga itself.",
-      "Mother plays Garba, and Radha performs the Raas; when roused, Bholanath performs the Tandava dance.",
-    ],
-  },
-  {
     titleMarathi: "घालीन लोटांगण",
     titleEnglish: "Ghalin Lotangan – Mantrapushpanjali",
     marathi: [
