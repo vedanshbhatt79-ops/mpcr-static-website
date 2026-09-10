@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { login, setToken, setCurrentUser } from '../services/auth.js'
+import { authService, apiClient } from '../api'
 
-export default function Login() {
-  const [username, setUsername] = useState('')
+export default function Login({ onLoginSuccess }) {
+  const [name, setName] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -13,19 +13,17 @@ export default function Login() {
     e.preventDefault()
     setError('')
 
-    if (!username.trim() || !password) {
+    if (!name.trim() || !password) {
       setError('Please enter both username and password.')
       return
     }
 
     setLoading(true)
     try {
-      const data = await login(username.trim(), password)
-      if (data?.token) {
-        setToken(data.token)
-      }
-      if (data?.user) {
-        setCurrentUser(data.user)
+      const data = await authService.login(name.trim(), password)
+      apiClient.setToken(data.accessToken)
+      if (data.currentUser) {
+        onLoginSuccess(data.currentUser)
       }
       navigate('/')
     } catch (err) {
@@ -45,12 +43,12 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="auth-form" noValidate>
           <div className="auth-field">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="name">Username</label>
             <input
-              id="username"
+              id="name"
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               placeholder="Enter your username"
               autoComplete="username"
             />

@@ -3,7 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 
-export default function Layout() {
+export default function Layout({ onLogout }) {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
   })
@@ -44,7 +44,7 @@ export default function Layout() {
 
   return (
     <>
-      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+      <Navbar theme={theme} onToggleTheme={toggleTheme} onLogout={onLogout} />
       <main>
         <Outlet />
       </main>

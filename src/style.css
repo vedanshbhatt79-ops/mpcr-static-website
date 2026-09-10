@@ -3961,6 +3961,48 @@ footer {
 
 }
 
+.auth-field textarea {
+
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color .3s, box-shadow .3s;
+
+    font-family: 'DM Sans', sans-serif;
+
+    box-sizing: border-box;
+
+    resize: vertical;
+
+}
+
+.auth-field textarea::placeholder {
+
+    color: var(--muted);
+
+}
+
+.auth-field textarea:focus {
+
+    border-color: var(--purple);
+
+    box-shadow: 0 0 0 3px rgba(122,95,168,.15);
+
+}
+
 .auth-error {
 
     color: var(--coral);
@@ -4000,5 +4042,65 @@ body.dark .auth-card {
 body.dark .auth-field input {
 
     background: var(--navy);
+
+}
+
+body.dark .auth-field textarea {
+
+    background: var(--navy);
+
+}
+
+.aarti-status {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-top: 24px;
+
+}
+
+.aarti-admin {
+
+    max-width: 620px;
+
+    margin: 36px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    align-items: center;
+
+}
+
+.aarti-admin-toggle {
+
+    cursor: pointer;
+
+}
+
+.aarti-add-form {
+
+    width: 100%;
+
+    padding: 28px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: var(--cream);
+
+}
+
+body.dark .aarti-add-form {
+
+    background: var(--navy2);
 
 }
