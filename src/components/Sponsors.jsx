@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
@@ -55,6 +56,8 @@ const tierColors = {
 }
 
 export default function Sponsors() {
+  const [lightbox, setLightbox] = useState(null)
+
   return (
     <section className="section sponsor-section">
       <div className="section-heading">
@@ -88,7 +91,8 @@ export default function Sponsors() {
               height="200"
               image={sponsor.image}
               alt={sponsor.name}
-              sx={{ objectFit: 'cover' }}
+              onClick={() => setLightbox(sponsor)}
+              sx={{ objectFit: 'cover', cursor: 'pointer' }}
             />
             <CardContent sx={{ padding: '20px 25px 25px' }}>
 
@@ -119,6 +123,18 @@ export default function Sponsors() {
           </Card>
         ))}
       </div>
+
+      {lightbox && (
+        <div
+          className="image-lightbox"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setLightbox(null)
+          }}
+        >
+          <button onClick={() => setLightbox(null)}>×</button>
+          <img src={lightbox.image} alt={lightbox.name} />
+        </div>
+      )}
     </section>
   )
 }

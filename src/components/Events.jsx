@@ -1,16 +1,16 @@
 const schedule = [
-  { date: '14/09/2026', day: 'Monday', event: '🙏 Rest', location: 'All Society Members' },
-  { date: '15/09/2026', day: 'Tuesday', event: '🙏 Rest', location: 'All Society Members' },
-  { date: '16/09/2026', day: 'Wednesday', event: '🎨 Drawing Competition', location: 'B Wing' },
-  { date: '17/09/2026', day: 'Thursday', event: '🎮 Game Show (Open for all)', location: 'E Wing' },
-  { date: '18/09/2026', day: 'Friday', event: "🌟 Modi Park's Got Talent", location: 'C Wing' },
-  { date: '19/09/2026', day: 'Saturday', event: '🎵 Sangeet Night', location: 'D Wing' },
-  { date: '20/09/2026', day: 'Sunday', event: '🕉️ Satyanarayan Katha', location: 'A Wing' },
-  { date: '21/09/2026', day: 'Monday', event: '🎭 Drama / Skit', location: 'I Wing' },
-  { date: '22/09/2026', day: 'Tuesday', event: '🎶 Antakshari (Open for all)', location: 'G Wing' },
-  { date: '23/09/2026', day: 'Wednesday', event: '🪔 Aarti Competition', location: 'H Wing' },
-  { date: '24/09/2026', day: 'Thursday', event: '🏆 Prize Distribution & Housie', location: 'F Wing' },
-  { date: '25/09/2026', day: 'Friday', event: '🚩 Visarjan', location: 'All Society Members', visarjan: true },
+  { date: '14/09/2026', day: 'Monday', event: '🙏 Rest', aarti: '🪔 7:30 PM' },
+  { date: '15/09/2026', day: 'Tuesday', event: '🙏 Rest', aarti: '🪔 7:30 PM' },
+  { date: '16/09/2026', day: 'Wednesday', event: '🎨 Drawing Competition', aarti: '🪔 7:30 PM' },
+  { date: '17/09/2026', day: 'Thursday', event: '🎮 Game Show (Open for all)', aarti: '🪔 7:30 PM' },
+  { date: '18/09/2026', day: 'Friday', event: "🌟 Modi Park's Got Talent", aarti: '🪔 7:30 PM' },
+  { date: '19/09/2026', day: 'Saturday', event: '🎵 Sangeet Night', aarti: '🪔 7:30 PM' },
+  { date: '20/09/2026', day: 'Sunday', event: '🕉️ Satyanarayan Katha', aarti: '🪔 9:00 AM' },
+  { date: '21/09/2026', day: 'Monday', event: '🎭 Drama / Skit', aarti: '🪔 7:30 PM' },
+  { date: '22/09/2026', day: 'Tuesday', event: '🎶 Antakshari (Open for all)', aarti: '🪔 7:30 PM' },
+  { date: '23/09/2026', day: 'Wednesday', event: '🪔 Aarti Competition', aarti: '🪔 7:30 PM' },
+  { date: '24/09/2026', day: 'Thursday', event: '🏆 Prize Distribution & Housie', aarti: '🪔 7:30 PM' },
+  { date: '25/09/2026', day: 'Friday', event: '🚩 Visarjan', aarti: '🚩 Maha Aarti 4:00 PM', visarjan: true },
 ]
 
 export default function Events() {
@@ -43,7 +43,7 @@ export default function Events() {
               <th>Date</th>
               <th>Day</th>
               <th>Event</th>
-              <th>Location / Aarti</th>
+              <th>Aarti</th>
             </tr>
           </thead>
           <tbody>
@@ -52,7 +52,7 @@ export default function Events() {
                 <td>{row.visarjan ? <strong>{row.date}</strong> : row.date}</td>
                 <td>{row.visarjan ? <strong>{row.day}</strong> : row.day}</td>
                 <td>{row.visarjan ? <strong>{row.event}</strong> : row.event}</td>
-                <td>{row.location}</td>
+                <td>{row.visarjan ? <strong>{row.aarti}</strong> : row.aarti}</td>
               </tr>
             ))}
           </tbody>
