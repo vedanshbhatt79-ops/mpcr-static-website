@@ -5,6 +5,7 @@ const footerLinks = [
   { to: '/events', label: 'Events' },
   { to: '/aarti', label: 'Aarti' },
   { to: '/gallery', label: 'Gallery' },
+  { to: '/sponsors', label: 'Sponsors' },
   { to: '/social', label: 'Social' },
 ]
 

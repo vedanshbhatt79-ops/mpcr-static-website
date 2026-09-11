@@ -9,6 +9,7 @@ import Home from './components/Home.jsx'
 import Layout from './components/Layout.jsx'
 import Login from './components/Login.jsx'
 import Social from './components/Social.jsx'
+import Sponsors from './components/Sponsors.jsx'
 
 const USER_KEY = 'mpcr_user'
 
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="events" element={<Events />} />
           <Route path="aarti" element={<Aarti />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="sponsors" element={<Sponsors />} />
           <Route path="social" element={<Social />} />
           <Route path="login" element={<Login onLoginSuccess={handleLoginSuccess} />} />
           <Route path="*" element={<Navigate to="/" replace />} />

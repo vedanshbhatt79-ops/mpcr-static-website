@@ -2559,6 +2559,102 @@ body.dark .social-card {
 
 
 /* =====================================================
+   SPONSORS
+===================================================== */
+
+.sponsor-section {
+
+    padding:
+        110px 7vw;
+
+    text-align:
+        center;
+
+}
+
+
+.sponsor-grid {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        20px;
+
+}
+
+
+.sponsor-card {
+
+    text-align:
+        left;
+
+}
+
+
+.sponsor-tier-badge {
+
+    display:
+        inline-block;
+
+    padding:
+        4px 14px;
+
+    border-radius:
+        30px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+body.dark .sponsor-card {
+
+    background:
+        #151a34;
+
+    border-color:
+        rgba(255,255,255,.1);
+
+}
+
+
+body.dark .sponsor-card .MuiTypography-root {
+
+    color:
+        var(--text);
+
+}
+
+
+body.dark .sponsor-card .MuiTypography-body2 {
+
+    color:
+        var(--muted);
+
+}
+
+
+/* =====================================================
    LIVE AARTI
 ===================================================== */
 
@@ -3319,6 +3415,14 @@ footer {
 
 
     .social-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .sponsor-grid {
 
         grid-template-columns:
             1fr;

@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@mody-park-cha-raja/finance_common": "^4.35.1-beta.1",
+    "@mui/material": "^9.4.0",
     "i": "^0.3.7",
     "npm": "^11.19.1",
     "react": "^19.2.8",
