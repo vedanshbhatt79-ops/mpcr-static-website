@@ -2,11 +2,12 @@ import { useState } from 'react'
 
 const images = [
   { src: 'images/ganpati-1.jpg.jpeg', alt: 'Ganpati', large: true, caption: '🙏 Our Bappa' },
-  { src: 'images/ganpati-2.jpg.jpeg', alt: 'Ganpati celebration', large: false },
   { src: 'images/ganpati-3.jpg.jpeg', alt: 'Ganpati Mandal', large: false },
   { src: 'images/ganpati-4.jpg.jpeg', alt: 'Ganpati celebration', large: false },
   { src: 'images/ganpati-5.jpg.jpeg', alt: 'Ganeshotsav celebration', large: false },
   { src: 'images/ganpati-6.jpg.jpeg', alt: 'Ganeshotsav celebration', large: false },
+  { src: 'images/ganpati-7.jpeg', alt: 'Ganeshotsav celebration', large: false },
+  { src: 'images/ganpati-8.jpeg', alt: 'Ganeshotsav celebration', large: false },
 ]
 
 export default function Gallery() {

@@ -2654,6 +2654,141 @@ body.dark .sponsor-card .MuiTypography-body2 {
 }
 
 
+.sponsor-marquee {
+
+    max-width:
+        1100px;
+
+    margin:
+        0 auto;
+
+    overflow:
+        hidden;
+
+    -webkit-mask-image:
+        linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+
+    mask-image:
+        linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+
+}
+
+
+.sponsor-marquee-track {
+
+    display:
+        flex;
+
+    gap:
+        24px;
+
+    width:
+        max-content;
+
+    animation:
+        sponsorScroll 24s linear infinite;
+
+}
+
+
+.sponsor-marquee:hover .sponsor-marquee-track {
+
+    animation-play-state:
+        paused;
+
+}
+
+
+.sponsor-logo {
+
+    width:
+        260px;
+
+    height:
+        200px;
+
+    flex-shrink:
+        0;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        22px;
+
+    overflow:
+        hidden;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+.sponsor-logo:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 20px 60px rgba(16,21,47,.12);
+
+}
+
+
+.sponsor-logo img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+}
+
+
+@keyframes sponsorScroll {
+
+    from {
+
+        transform:
+            translateX(0);
+
+    }
+
+    to {
+
+        transform:
+            translateX(-50%);
+
+    }
+
+}
+
+
+body.dark .sponsor-logo {
+
+    background:
+        #151a34;
+
+    border-color:
+        rgba(255,255,255,.1);
+
+}
+
+
 /* =====================================================
    LIVE AARTI
 ===================================================== */
