@@ -9,7 +9,7 @@ export default function SponsorStrip() {
         <span className="section-label">OUR SUPPORTERS</span>
         <h2>
           2026
-          <span>Sponsors</span>
+          <span> Sponsors</span>
         </h2>
       </div>
 
