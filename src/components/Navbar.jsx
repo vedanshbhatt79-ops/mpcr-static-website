@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../contexts/auth.context'
+import { sponsors } from '../data/sponsors.js'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -85,6 +86,21 @@ export default function Navbar({ theme, onToggleTheme, onLogout }) {
           </button>
         </div>
       </div>
+
+      {sponsors.length > 0 && (
+        <div className="navbar-sponsor-marquee">
+          <div className="sponsor-marquee-track">
+            {[...sponsors, ...sponsors].map((sponsor, index) => (
+              <img
+                key={`${sponsor.name}-${index}`}
+                src={sponsor.image}
+                alt={sponsor.name}
+                className="navbar-sponsor-logo"
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   )
 }

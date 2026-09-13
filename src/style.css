@@ -2850,31 +2850,19 @@ body.dark .sponsor-logo {
 }
 
 
-.hero-sponsor-marquee {
-
-    position:
-        absolute;
-
-    bottom:
-        0;
-
-    left:
-        0;
-
-    right:
-        0;
+.navbar-sponsor-marquee {
 
     overflow:
         hidden;
 
     padding:
-        14px 0;
+        8px 0;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
 
     background:
-        rgba(15,17,36,.65);
-
-    backdrop-filter:
-        blur(6px);
+        rgba(10,12,26,.55);
 
     -webkit-mask-image:
         linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
@@ -2885,7 +2873,7 @@ body.dark .sponsor-logo {
 }
 
 
-.hero-sponsor-marquee .sponsor-marquee-track {
+.navbar-sponsor-marquee .sponsor-marquee-track {
 
     gap:
         18px;
@@ -2893,16 +2881,16 @@ body.dark .sponsor-logo {
 }
 
 
-.hero-sponsor-logo {
+.navbar-sponsor-logo {
 
     height:
-        60px;
+        40px;
 
     width:
         auto;
 
     border-radius:
-        10px;
+        8px;
 
     border:
         1px solid rgba(255,255,255,.12);
@@ -2922,7 +2910,7 @@ body.dark .sponsor-logo {
 }
 
 
-.hero-sponsor-logo:hover {
+.navbar-sponsor-logo:hover {
 
     opacity:
         1;
