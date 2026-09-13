@@ -1,12 +1,5 @@
 import { useState } from 'react'
-
-const sponsors = [
-  {
-    name: 'Modi Park Sponsors',
-    image: 'images/sponsor-1.jpeg',
-    description: 'Proud supporter of Modi Park Cha Raja Ganeshotsav 2026.',
-  },
-]
+import { sponsors } from '../data/sponsors.js'
 
 export default function Sponsors() {
   const [lightbox, setLightbox] = useState(null)
@@ -24,18 +17,17 @@ export default function Sponsors() {
         <p>We are grateful to our sponsors for their generous support of Ganeshotsav 2026.</p>
       </div>
 
-      <div className="sponsor-marquee">
-        <div className="sponsor-marquee-track">
-          {[...sponsors, ...sponsors].map((sponsor, index) => (
-            <div
-              key={`${sponsor.name}-${index}`}
-              className="sponsor-logo"
-              onClick={() => setLightbox(sponsor)}
-            >
-              <img src={sponsor.image} alt={sponsor.name} />
-            </div>
-          ))}
-        </div>
+      <div className="sponsor-grid">
+        {sponsors.map((sponsor) => (
+          <div
+            key={sponsor.name}
+            className="sponsor-card"
+            onClick={() => setLightbox(sponsor)}
+          >
+            <img src={sponsor.image} alt={sponsor.name} />
+            <h3 className="sponsor-name">{sponsor.name}</h3>
+          </div>
+        ))}
       </div>
 
       {lightbox && (

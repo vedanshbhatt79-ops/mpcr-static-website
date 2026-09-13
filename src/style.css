@@ -2596,7 +2596,76 @@ body.dark .social-card {
 .sponsor-card {
 
     text-align:
-        left;
+        center;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        22px;
+
+    overflow:
+        hidden;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+.sponsor-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 20px 60px rgba(16,21,47,.12);
+
+}
+
+
+.sponsor-card img {
+
+    width:
+        100%;
+
+    height:
+        200px;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+}
+
+
+.sponsor-name {
+
+    font-family:
+        'Playfair Display', serif;
+
+    font-weight:
+        700;
+
+    font-size:
+        17px;
+
+    color:
+        var(--text);
+
+    margin:
+        0;
+
+    padding:
+        18px 20px 20px;
 
 }
 
@@ -2638,18 +2707,10 @@ body.dark .sponsor-card {
 }
 
 
-body.dark .sponsor-card .MuiTypography-root {
+body.dark .sponsor-card .sponsor-name {
 
     color:
         var(--text);
-
-}
-
-
-body.dark .sponsor-card .MuiTypography-body2 {
-
-    color:
-        var(--muted);
 
 }
 
@@ -2785,6 +2846,86 @@ body.dark .sponsor-logo {
 
     border-color:
         rgba(255,255,255,.1);
+
+}
+
+
+.hero-sponsor-marquee {
+
+    position:
+        absolute;
+
+    bottom:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    overflow:
+        hidden;
+
+    padding:
+        14px 0;
+
+    background:
+        rgba(15,17,36,.65);
+
+    backdrop-filter:
+        blur(6px);
+
+    -webkit-mask-image:
+        linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+
+    mask-image:
+        linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+
+}
+
+
+.hero-sponsor-marquee .sponsor-marquee-track {
+
+    gap:
+        18px;
+
+}
+
+
+.hero-sponsor-logo {
+
+    height:
+        80px;
+
+    width:
+        auto;
+
+    border-radius:
+        10px;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    object-fit:
+        cover;
+
+    flex-shrink:
+        0;
+
+    opacity:
+        .88;
+
+    transition:
+        opacity .3s;
+
+}
+
+
+.hero-sponsor-logo:hover {
+
+    opacity:
+        1;
 
 }
 

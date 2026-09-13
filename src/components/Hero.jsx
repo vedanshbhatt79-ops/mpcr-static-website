@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { sponsors } from '../data/sponsors.js'
 
 export default function Hero() {
   return (
@@ -54,6 +55,19 @@ export default function Hero() {
             <strong>Together</strong>
             <small>Community</small>
           </div>
+        </div>
+      </div>
+
+      <div className="hero-sponsor-marquee">
+        <div className="sponsor-marquee-track">
+          {[...sponsors, ...sponsors].map((sponsor, index) => (
+            <img
+              key={`${sponsor.name}-${index}`}
+              src={sponsor.image}
+              alt={sponsor.name}
+              className="hero-sponsor-logo"
+            />
+          ))}
         </div>
       </div>
     </section>
