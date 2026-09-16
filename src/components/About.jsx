@@ -14,7 +14,7 @@ export default function About() {
       </div>
 
       <div className="about-grid">
-        <div className="about-image">
+        <div className="about-image" data-reveal="left">
           <img src="images/ganpati-2.jpg.jpeg" alt="Ganpati celebration" />
           <div className="photo-caption">
             <span>🌺</span>
@@ -25,7 +25,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="about-content">
+        <div className="about-content" data-reveal="right">
           <h3>
             One Bappa.
             <span>One Community.</span>

@@ -40,10 +40,10 @@ export default function Countdown() {
 
   return (
     <section className="countdown-section">
-      <div className="countdown-card">
+      <div className="countdown-card" data-reveal="zoom">
         <div className="countdown-heading">
           <span>THE WAIT BEGINS</span>
-          <h2>⏳ Countdown to Bappa</h2>
+          <h2 className="shimmer-text">⏳ Countdown to Bappa</h2>
           <p>Get ready to welcome Modi Park Cha Raja!</p>
           <strong className="arrival-date">
             Aagman — 12 September 2026 • 3:30 PM
@@ -53,7 +53,9 @@ export default function Countdown() {
         <div className="countdown">
           {boxes.map((box) => (
             <div className="time-box" key={box.label}>
-              <strong>{box.value}</strong>
+              <strong className={box.label === 'Seconds' ? 'ticking' : undefined} key={box.value}>
+                {box.value}
+              </strong>
               <span>{box.label}</span>
             </div>
           ))}

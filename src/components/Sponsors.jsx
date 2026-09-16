@@ -18,10 +18,12 @@ export default function Sponsors() {
       </div>
 
       <div className="sponsor-grid">
-        {sponsors.map((sponsor) => (
+        {sponsors.map((sponsor, index) => (
           <div
             key={sponsor.name}
             className="sponsor-card"
+            data-reveal
+            style={{ '--reveal-delay': `${(index % 3) * 0.1}s` }}
             onClick={() => setLightbox(sponsor)}
           >
             <img src={sponsor.image} alt={sponsor.name} />

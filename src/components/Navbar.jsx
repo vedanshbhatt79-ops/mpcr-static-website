@@ -34,11 +34,12 @@ export default function Navbar({ theme, onToggleTheme, onLogout }) {
         </Link>
 
         <nav id="navMenu" className={menuOpen ? 'active' : ''}>
-          {links.map((link) => (
+          {links.map((link, index) => (
             <NavLink
               key={link.to}
               to={link.to}
               end={link.to === '/'}
+              style={{ '--nav-index': index }}
               className={({ isActive }) =>
                 isActive ? 'nav-link active' : 'nav-link'
               }

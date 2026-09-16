@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
+import useReveal from '../hooks/useReveal.js'
 
 export default function Layout({ onLogout }) {
   const [theme, setTheme] = useState(() => {
@@ -29,6 +30,8 @@ export default function Layout({ onLogout }) {
   }, [])
 
   const { pathname } = useLocation()
+
+  useReveal([pathname])
 
   useEffect(() => {
     window.scrollTo(0, 0)

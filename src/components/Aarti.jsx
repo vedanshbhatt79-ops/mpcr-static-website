@@ -102,7 +102,7 @@ export default function Aarti() {
     <section id="aarti" className="section aarti-section">
       <div className="aarti-decoration">ॐ</div>
 
-      <div className="section-heading">
+      <div className="section-heading" data-reveal>
         <span className="section-label">DAILY DEVOTION</span>
         <h2>
           🪔 Aarti
@@ -118,7 +118,9 @@ export default function Aarti() {
 
       {aartis.length > 0 && (
         <>
-          <div className="language-switch">
+          <div className="diya" aria-hidden="true">🪔</div>
+
+          <div className="language-switch" data-reveal>
             <button
               className={`language-btn ${currentLanguage === 'marathi' ? 'active' : ''}`}
               data-language="marathi"

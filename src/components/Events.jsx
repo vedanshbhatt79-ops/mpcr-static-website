@@ -13,16 +13,28 @@ const schedule = [
   { date: '25/09/2026', day: 'Friday', event: '🚩 Visarjan', aarti: '🚩 Maha Aarti 4:00 PM', visarjan: true },
 ]
 
+const parseDate = (date) => {
+  const [d, m, y] = date.split('/').map(Number)
+  return new Date(y, m - 1, d)
+}
+
+const today = new Date()
+today.setHours(0, 0, 0, 0)
+
+const upcoming = schedule
+  .filter((row) => parseDate(row.date) >= today)
+  .sort((a, b) => parseDate(a.date) - parseDate(b.date))[0]
+
 export default function Events() {
   return (
     <section id="events" className="section events-section">
-      <div className="section-heading">
+      <div className="section-heading" data-reveal>
         <span className="section-label">GANESHOTSAV 2026</span>
         <h2>Events & Programme</h2>
         <p>Celebrate, participate and create memories with Modi Park Cha Raja.</p>
       </div>
 
-      <div className="special-event aagman-event">
+      <div className="special-event aagman-event" data-reveal>
         <div className="special-icon">🥁</div>
         <div>
           <span>SATURDAY • 12 SEPTEMBER 2026</span>
@@ -36,7 +48,7 @@ export default function Events() {
         </div>
       </div>
 
-      <div className="events-table-wrapper">
+      <div className="events-table-wrapper" data-reveal style={{ '--reveal-delay': '.1s' }}>
         <table className="events-table">
           <thead>
             <tr>
@@ -47,19 +59,32 @@ export default function Events() {
             </tr>
           </thead>
           <tbody>
-            {schedule.map((row) => (
-              <tr key={row.date} className={row.visarjan ? 'visarjan-row' : undefined}>
-                <td>{row.visarjan ? <strong>{row.date}</strong> : row.date}</td>
-                <td>{row.visarjan ? <strong>{row.day}</strong> : row.day}</td>
-                <td>{row.visarjan ? <strong>{row.event}</strong> : row.event}</td>
-                <td>{row.visarjan ? <strong>{row.aarti}</strong> : row.aarti}</td>
-              </tr>
-            ))}
+            {schedule.map((row) => {
+              const isUpcoming = upcoming && row.date === upcoming.date
+              return (
+                <tr
+                  key={row.date}
+                  className={[
+                    row.visarjan ? 'visarjan-row' : '',
+                    isUpcoming ? 'upcoming-row' : '',
+                  ].join(' ').trim() || undefined}
+                >
+                  <td>{row.visarjan || isUpcoming ? <strong>{row.date}</strong> : row.date}</td>
+                  <td>{row.visarjan || isUpcoming ? <strong>{row.day}</strong> : row.day}</td>
+                  <td>
+                    <span className={isUpcoming ? 'event-pill' : undefined}>
+                      {row.event}
+                    </span>
+                  </td>
+                  <td>{row.visarjan || isUpcoming ? <strong>{row.aarti}</strong> : row.aarti}</td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </div>
 
-      <div className="special-event">
+      <div className="special-event" data-reveal>
         <div className="special-icon">🎵</div>
         <div>
           <span>SPECIAL HIGHLIGHT</span>
@@ -81,7 +106,7 @@ export default function Events() {
         </div>
       </div>
 
-      <div className="updates-box">
+      <div className="updates-box" data-reveal>
         <h3>📢 Important Updates</h3>
         <ul>
           <li>

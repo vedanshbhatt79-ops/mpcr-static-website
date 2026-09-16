@@ -81,7 +81,7 @@ export default function LiveAarti() {
 
   return (
     <section className="live-section">
-      <div className="section-heading">
+      <div className="section-heading" data-reveal>
         <span className="section-label">LIVE DARSHAN</span>
         <h2>
           Live
@@ -90,7 +90,7 @@ export default function LiveAarti() {
         <p>Watch the Aarti and celebrations of Modi Park Cha Raja live.</p>
       </div>
 
-      <div className="live-card">
+      <div className="live-card" data-reveal="zoom" style={{ '--reveal-delay': '.15s' }}>
         <div className="live-header">
           <div>
             {state.status === 'live' ? (

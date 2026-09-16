@@ -30,7 +30,7 @@ const socials = [
 export default function Social() {
   return (
     <section className="social-section">
-      <div className="section-heading">
+      <div className="section-heading" data-reveal>
         <span className="section-label">STAY CONNECTED</span>
         <h2>
           Follow
@@ -42,13 +42,15 @@ export default function Social() {
       <LiveAarti />
 
       <div className="social-grid">
-        {socials.map((social) => (
+        {socials.map((social, index) => (
           <a
             key={social.name}
             href={social.href}
             target="_blank"
             rel="noopener"
             className={social.className}
+            data-reveal
+            style={{ '--reveal-delay': `${index * 0.12}s` }}
           >
             <div className="social-icon">{social.icon}</div>
             <div>

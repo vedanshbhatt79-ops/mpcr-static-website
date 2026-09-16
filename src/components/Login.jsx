@@ -35,7 +35,8 @@ export default function Login({ onLoginSuccess }) {
 
   return (
     <section className="auth-page">
-      <div className="auth-card">
+      <div className="auth-card" data-reveal="zoom">
+        <div className="diya" aria-hidden="true">🪔</div>
         <h1 className="auth-title">Welcome Back</h1>
         <p className="auth-subtitle">
           Sign in to access the admin area

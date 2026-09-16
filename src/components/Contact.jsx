@@ -1,3 +1,42 @@
+const boxes = [
+  {
+    icon: '📍',
+    title: 'Location',
+    body: (
+      <p>
+        Modi Park,<br />
+        Irani Wadi Road No. 3,<br />
+        Kandivali West,<br />
+        Mumbai – 400067
+      </p>
+    ),
+  },
+  {
+    icon: '🪔',
+    title: 'Daily Aarti',
+    body: (
+      <p>
+        Every day during Ganeshotsav
+        <br />
+        <strong>7:30 PM</strong>
+      </p>
+    ),
+  },
+  {
+    icon: '🏛️',
+    title: 'Mandal',
+    body: (
+      <p>
+        Modi Park Cha Raja Association
+        <br />
+        <br />
+        CIN:
+        <strong>U88900MH2023NPL408060</strong>
+      </p>
+    ),
+  },
+]
+
 export default function Contact() {
   return (
     <section id="contact" className="section contact-section">
@@ -10,38 +49,18 @@ export default function Contact() {
       </div>
 
       <div className="contact-grid">
-        <div className="contact-box">
-          <span>📍</span>
-          <h3>Location</h3>
-          <p>
-            Modi Park,<br />
-            Irani Wadi Road No. 3,<br />
-            Kandivali West,<br />
-            Mumbai – 400067
-          </p>
-        </div>
-
-        <div className="contact-box">
-          <span>🪔</span>
-          <h3>Daily Aarti</h3>
-          <p>
-            Every day during Ganeshotsav
-            <br />
-            <strong>7:30 PM</strong>
-          </p>
-        </div>
-
-        <div className="contact-box">
-          <span>🏛️</span>
-          <h3>Mandal</h3>
-          <p>
-            Modi Park Cha Raja Association
-            <br />
-            <br />
-            CIN:
-            <strong>U88900MH2023NPL408060</strong>
-          </p>
-        </div>
+        {boxes.map((box, index) => (
+          <div
+            key={box.title}
+            className="contact-box"
+            data-reveal
+            style={{ '--reveal-delay': `${index * 0.12}s` }}
+          >
+            <span>{box.icon}</span>
+            <h3>{box.title}</h3>
+            {box.body}
+          </div>
+        ))}
       </div>
     </section>
   )

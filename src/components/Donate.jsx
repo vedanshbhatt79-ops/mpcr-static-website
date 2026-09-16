@@ -8,7 +8,7 @@ const items = [
 export default function Donate() {
   return (
     <section id="donate" className="donation-section">
-      <div className="donation-content">
+      <div className="donation-content" data-reveal="left">
         <span className="section-label">SUPPORT BAPPA</span>
         <h2>
           Your Contribution
@@ -20,13 +20,19 @@ export default function Donate() {
         </p>
 
         <div className="donation-list">
-          {items.map((item) => (
-            <div key={item}>✓ {item}</div>
+          {items.map((item, index) => (
+            <div
+              key={item}
+              data-reveal
+              style={{ '--reveal-delay': `${index * 0.1}s` }}
+            >
+              ✓ {item}
+            </div>
           ))}
         </div>
       </div>
 
-      <div className="qr-card">
+      <div className="qr-card" data-reveal="right">
         <div className="qr-title">
           <span>💳</span>
           <div>
