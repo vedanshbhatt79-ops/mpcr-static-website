@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { useAuth } from '../contexts/auth.context'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -9,18 +8,13 @@ const links = [
   { to: '/gallery', label: 'Gallery' },
   { to: '/sponsors', label: 'Sponsors' },
   { to: '/social', label: 'Social' },
+  { to: '/login', label: 'Login' },
 ]
 
-export default function Navbar({ theme, onToggleTheme, onLogout }) {
+export default function Navbar({ theme, onToggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { user } = useAuth()
 
   const toggleMenu = () => setMenuOpen((open) => !open)
-
-  const handleLogout = () => {
-    setMenuOpen(false)
-    onLogout()
-  }
 
   return (
     <header className="navbar">
@@ -48,22 +42,6 @@ export default function Navbar({ theme, onToggleTheme, onLogout }) {
               {link.label}
             </NavLink>
           ))}
-
-          {user ? (
-            <div className="nav-link nav-user" onClick={handleLogout}>
-              {user.name || 'User'} · Logout
-            </div>
-          ) : (
-            <NavLink
-              to="/login"
-              className={({ isActive }) =>
-                isActive ? 'nav-link active' : 'nav-link'
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              Login
-            </NavLink>
-          )}
         </nav>
 
         <div className="nav-actions">

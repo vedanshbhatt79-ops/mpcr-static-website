@@ -4,7 +4,7 @@ import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 import useReveal from '../hooks/useReveal.js'
 
-export default function Layout({ onLogout }) {
+export default function Layout() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
   })
@@ -47,7 +47,7 @@ export default function Layout({ onLogout }) {
 
   return (
     <>
-      <Navbar theme={theme} onToggleTheme={toggleTheme} onLogout={onLogout} />
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Outlet />
       </main>

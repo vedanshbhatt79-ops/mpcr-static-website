@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { AARTI_POLL_INTERVAL, aartiService } from '../api'
+import { AARTI_POLL_INTERVAL, getLiveStatus } from '../services/aarti.service.js'
 
 export default function LiveAarti() {
   const [state, setState] = useState({
@@ -9,7 +9,7 @@ export default function LiveAarti() {
   })
 
   const check = useCallback(() => {
-    aartiService.getLiveStatus()
+    getLiveStatus()
       .then((result) =>
         setState({
           status: result.status,
