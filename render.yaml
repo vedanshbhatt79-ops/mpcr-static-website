@@ -1,0 +1,13 @@
+services:
+  - type: static
+    name: modipark-cha-raja
+    runtime: static
+    repo: https://github.com/vedanshbhatt79-ops/mpcr-static-website
+    branch: release/sprint-1
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: false
+    autoDeploy: true
+    envVars:
+      - key: VITE_BASE
+        value: /
