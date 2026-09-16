@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: env.VITE_BASE || '/mpcr-static-website/',
+    base: env.VITE_BASE || './',
     server: {
       port: 5174,
     },
