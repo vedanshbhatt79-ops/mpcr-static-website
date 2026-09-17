@@ -3237,7 +3237,7 @@ body.dark .updates-box h3 {
 .social-grid {
 
     max-width:
-        1000px;
+        1200px;
 
     margin:
         auto;
@@ -3246,7 +3246,7 @@ body.dark .updates-box h3 {
         grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(4,1fr);
 
     gap:
         15px;
@@ -3334,6 +3334,14 @@ body.dark .social-card {
 }
 
 
+.social-card.whatsapp:hover {
+
+    border-color:
+        rgba(37,211,102,.45);
+
+}
+
+
 .social-icon {
 
     width:
@@ -3394,6 +3402,14 @@ body.dark .social-card {
 
     background:
         #ff0000;
+
+}
+
+
+.social-card.whatsapp .social-icon {
+
+    background:
+        #25D366;
 
 }
 
