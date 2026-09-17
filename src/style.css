@@ -3813,7 +3813,7 @@ body.dark .sponsor-logo {
 .sponsor-strip-marquee .sponsor-marquee-track {
 
     gap:
-        24px;
+        32px;
 
 }
 
@@ -3821,13 +3821,13 @@ body.dark .sponsor-logo {
 .sponsor-strip-logo {
 
     height:
-        84px;
+        100px;
 
     width:
         auto;
 
     max-width:
-        220px;
+        260px;
 
     border-radius:
         12px;
