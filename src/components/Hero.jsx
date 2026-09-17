@@ -54,7 +54,7 @@ export default function Hero() {
       <div className="hero-image" data-reveal="zoom" style={{ '--reveal-delay': '.15s' }}>
         <div className="image-ring"></div>
 
-        <img src="images/ganpati-1.jpg.jpeg" alt="Modi Park Cha Raja Ganpati" />
+        <img src="images/ganapti-9 (10).jpeg" alt="Modi Park Cha Raja Ganpati" />
 
         <div className="floating-card card-top">
           <span>🙏</span>
