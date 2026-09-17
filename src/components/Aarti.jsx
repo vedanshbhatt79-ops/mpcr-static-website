@@ -75,6 +75,14 @@ export default function Aarti() {
       </div>
 
       <div className="aarti-navigation">
+        <button
+          className="aarti-arrow aarti-arrow-prev"
+          type="button"
+          aria-label="Previous Aarti"
+          onClick={() => setAarti(currentAarti - 1)}
+        >
+          ←
+        </button>
         <div
           id="aartiContent"
           className="aarti-card"
@@ -103,6 +111,14 @@ export default function Aarti() {
             </>
           )}
         </div>
+        <button
+          className="aarti-arrow aarti-arrow-next"
+          type="button"
+          aria-label="Next Aarti"
+          onClick={() => setAarti(currentAarti + 1)}
+        >
+          →
+        </button>
       </div>
 
       <p className="aarti-swipe-hint">← Swipe left / right to change Aarti →</p>
