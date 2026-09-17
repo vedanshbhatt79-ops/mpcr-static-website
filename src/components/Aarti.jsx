@@ -1,13 +1,28 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import aartis from '../aartis.js'
 
 export default function Aarti() {
   const [currentAarti, setCurrentAarti] = useState(0)
   const [currentLanguage, setCurrentLanguage] = useState('marathi')
+  const touchStartX = useRef(null)
 
   const setAarti = (index) => {
     const total = aartis.length
     setCurrentAarti(((index + total) % total))
+  }
+
+  const onTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const onTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current
+    touchStartX.current = null
+
+    if (Math.abs(deltaX) < 50) return
+    if (deltaX < 0) setAarti(currentAarti + 1)
+    else setAarti(currentAarti - 1)
   }
 
   const aarti = aartis[currentAarti]
@@ -60,15 +75,12 @@ export default function Aarti() {
       </div>
 
       <div className="aarti-navigation">
-        <button
-          className="aarti-arrow"
-          aria-label="Previous aarti"
-          onClick={() => setAarti(currentAarti - 1)}
+        <div
+          id="aartiContent"
+          className="aarti-card"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
         >
-          {'<'}
-        </button>
-
-        <div id="aartiContent" className="aarti-card">
           {currentLanguage === 'marathi' ? (
             <>
               <h3 className="aarti-title">{aarti.titleMarathi}</h3>
@@ -91,15 +103,9 @@ export default function Aarti() {
             </>
           )}
         </div>
-
-        <button
-          className="aarti-arrow"
-          aria-label="Next aarti"
-          onClick={() => setAarti(currentAarti + 1)}
-        >
-          {'>'}
-        </button>
       </div>
+
+      <p className="aarti-swipe-hint">← Swipe left / right to change Aarti →</p>
     </section>
   )
 }

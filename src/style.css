@@ -2464,6 +2464,9 @@ body.dark .updates-box h3 {
         var(--gold2)
         rgba(255,255,255,.1);
 
+    touch-action:
+        pan-y;
+
     border-radius:
         25px;
 
@@ -2524,53 +2527,22 @@ body.dark .updates-box h3 {
 }
 
 
-.aarti-arrow {
+.aarti-swipe-hint {
 
-    flex-shrink:
-        0;
-
-    width:
-        50px;
-
-    height:
-        50px;
-
-    border:
-        1px solid
-        rgba(244,162,97,.35);
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(255,255,255,.1);
+    text-align:
+        center;
 
     color:
-        var(--gold2);
+        rgba(255,255,255,.45);
 
     font-size:
-        24px;
+        13px;
 
-    line-height:
-        1;
+    margin-top:
+        18px;
 
-    cursor:
-        pointer;
-
-    transition:
-        background .3s ease,
-        transform .2s ease;
-
-}
-
-
-.aarti-arrow:hover {
-
-    background:
-        var(--purple2);
-
-    transform:
-        scale(1.08);
+    letter-spacing:
+        .5px;
 
 }
 
@@ -2619,7 +2591,7 @@ body.dark .updates-box h3 {
         2;
 
     font-size:
-        17px;
+        20px;
 
 }
 
@@ -2634,11 +2606,17 @@ body.dark .updates-box h3 {
 
 .english-aarti {
 
+    text-align:
+        center;
+
     line-height:
         1.9;
 
     color:
         rgba(255,255,255,.85);
+
+    font-size:
+        18px;
 
 }
 
@@ -5906,24 +5884,12 @@ body.dark .shimmer-text {
     }
 
 
-    .aarti-arrow {
-
-        width:
-            42px;
-
-        height:
-            42px;
-
-        font-size:
-            20px;
-
-    }
-
-
     .aarti-lines {
 
         font-size:
-            15px;
+            17px;
+        line-height:
+            1.8;
 
     }
 
@@ -5931,7 +5897,7 @@ body.dark .shimmer-text {
     .english-aarti {
 
         font-size:
-            14px;
+            16px;
 
     }
 
