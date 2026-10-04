@@ -8,10 +8,9 @@ const links = [
   { to: '/gallery', label: 'Gallery' },
   { to: '/sponsors', label: 'Sponsors' },
   { to: '/social', label: 'Social' },
-  { to: '/login', label: 'Login' },
 ]
 
-export default function Navbar({ theme, onToggleTheme }) {
+export default function Navbar({ theme, onToggleTheme, authenticated, onLogout }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => setMenuOpen((open) => !open)
@@ -42,6 +41,31 @@ export default function Navbar({ theme, onToggleTheme }) {
               {link.label}
             </NavLink>
           ))}
+
+          {authenticated ? (
+            <button
+              type="button"
+              className="nav-link"
+              style={{ '--nav-index': links.length }}
+              onClick={() => {
+                setMenuOpen(false)
+                onLogout()
+              }}
+            >
+              Logout
+            </button>
+          ) : (
+            <NavLink
+              to="/login"
+              style={{ '--nav-index': links.length }}
+              className={({ isActive }) =>
+                isActive ? 'nav-link active' : 'nav-link'
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              Login
+            </NavLink>
+          )}
         </nav>
 
         <div className="nav-actions">

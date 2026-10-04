@@ -21,11 +21,11 @@ export default function Login() {
     setLoading(true)
     try {
       const data = await login(username.trim(), password)
-      if (data?.token) {
-        setToken(data.token)
+      if (data?.accessToken) {
+        setToken(data.accessToken)
       }
-      if (data?.user) {
-        setCurrentUser(data.user)
+      if (data?.currentUser) {
+        setCurrentUser(data.currentUser)
       }
       navigate('/')
     } catch (err) {
