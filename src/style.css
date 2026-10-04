@@ -38,6 +38,9 @@
     --shadow-glow:
         0 18px 50px rgba(245,158,11,.28);
 
+    /* fixed navbar height: nav-container 12px padding + logo + 1px border */
+    --nav-h: 75px;
+
 }
 
 
@@ -75,6 +78,8 @@ body.dark {
 html {
 
     scroll-behavior: smooth;
+
+    scroll-padding-top: var(--nav-h);
 
 }
 
@@ -114,6 +119,9 @@ body {
 main {
 
     flex: 1 0 auto;
+
+    /* offsets the fixed .navbar for every route */
+    padding-top: var(--nav-h);
 
 }
 
@@ -399,10 +407,10 @@ nav a:hover,
 
 .hero {
 
-    min-height: 100vh;
+    min-height: calc(100dvh - var(--nav-h));
 
     padding:
-        150px 7vw 100px;
+        60px 7vw 100px;
 
     background:
 
@@ -1331,7 +1339,7 @@ body.dark .countdown-card {
 .section {
 
     padding:
-        110px 7vw;
+        80px 7vw;
 
 }
 
@@ -3226,7 +3234,7 @@ body.dark .updates-box h3 {
 .social-section {
 
     padding:
-        110px 7vw;
+        80px 7vw;
 
     text-align:
         center;
@@ -3490,7 +3498,7 @@ body.dark .social-card {
 .sponsor-section {
 
     padding:
-        110px 7vw;
+        80px 7vw;
 
     text-align:
         center;
@@ -5492,14 +5500,6 @@ body.dark .shimmer-text {
     }
 
 
-    .hero {
-
-        padding-top:
-            130px;
-
-    }
-
-
     .hero-image {
 
         width:
@@ -5561,7 +5561,7 @@ body.dark .shimmer-text {
             absolute;
 
         top:
-            75px;
+            100%;
 
         left:
             15px;
@@ -5763,6 +5763,13 @@ body.dark .shimmer-text {
 
 @media(max-width:550px) {
 
+    :root {
+
+        --nav-h: 67px;
+
+    }
+
+
     .brand-text strong {
 
         font-size:
@@ -5793,7 +5800,7 @@ body.dark .shimmer-text {
     .hero {
 
         padding:
-            125px 20px 80px;
+            60px 20px 80px;
 
     }
 
@@ -5844,7 +5851,7 @@ body.dark .shimmer-text {
     .section {
 
         padding:
-            80px 18px;
+            56px 18px;
 
     }
 
@@ -6273,7 +6280,7 @@ body.dark .shimmer-text {
 
 .auth-page {
 
-    min-height: calc(100vh - 200px);
+    min-height: calc(100dvh - var(--nav-h));
 
     display: flex;
 
@@ -6281,7 +6288,7 @@ body.dark .shimmer-text {
 
     justify-content: center;
 
-    padding: 40px 24px;
+    padding: 24px;
 
 }
 

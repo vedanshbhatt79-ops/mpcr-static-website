@@ -3,11 +3,14 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 import useReveal from '../hooks/useReveal.js'
+import useAuth from '../hooks/useAuth.js'
 
 export default function Layout() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
   })
+
+  const { authenticated, logout } = useAuth()
 
   useEffect(() => {
     document.body.classList.toggle('dark', theme === 'dark')
@@ -47,7 +50,12 @@ export default function Layout() {
 
   return (
     <>
-      <Navbar theme={theme} onToggleTheme={toggleTheme} />
+      <Navbar
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        authenticated={authenticated}
+        onLogout={logout}
+      />
       <main>
         <Outlet />
       </main>
