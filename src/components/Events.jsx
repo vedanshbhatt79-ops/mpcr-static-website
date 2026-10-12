@@ -4,12 +4,8 @@ export default function Events() {
       <div className="section-heading" data-reveal>
         <span className="section-label">GANESHOTSAV 2026</span>
         <h2>Events & Programme</h2>
-        <p>
-          Celebrate, participate and create memories with Modi Park Cha Raja.
-        </p>
-        <p style={{ marginTop: "10px", fontWeight: 700, fontSize: "1.1rem" }}>
-          TBA - To Be Announced...
-        </p>
+        <p>Celebrate, participate and create memories with Modi Park Cha Raja.</p>
+        <p style={{ marginTop: '10px', fontWeight: 700, fontSize: '1.1rem' }}>TBA - To Be Announced...</p>
       </div>
 
       <div className="special-event aagman-event" data-reveal>
@@ -26,19 +22,8 @@ export default function Events() {
         </div>
       </div>
 
-      <div
-        className="events-table-wrapper"
-        data-reveal
-        style={{ "--reveal-delay": ".1s" }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            padding: "40px 20px",
-            fontSize: "1.3rem",
-            fontWeight: 700,
-          }}
-        >
+      <div className="events-table-wrapper" data-reveal style={{ '--reveal-delay': '.1s' }}>
+        <div style={{ textAlign: 'center', padding: '40px 20px', fontSize: '1.3rem', fontWeight: 700 }}>
           TBA - To Be Announced...
         </div>
       </div>
