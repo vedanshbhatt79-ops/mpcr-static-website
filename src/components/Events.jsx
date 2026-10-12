@@ -50,39 +50,9 @@ export default function Events() {
       </div>
 
       <div className="events-table-wrapper" data-reveal style={{ '--reveal-delay': '.1s' }}>
-        <table className="events-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Day</th>
-              <th>Event</th>
-              <th>Aarti</th>
-            </tr>
-          </thead>
-          <tbody>
-            {schedule.map((row) => {
-              const isUpcoming = upcoming && row.date === upcoming.date
-              return (
-                <tr
-                  key={row.date}
-                  className={[
-                    row.visarjan ? 'visarjan-row' : '',
-                    isUpcoming ? 'upcoming-row' : '',
-                  ].join(' ').trim() || undefined}
-                >
-                  <td>{row.visarjan || isUpcoming ? <strong>{row.date}</strong> : row.date}</td>
-                  <td>{row.visarjan || isUpcoming ? <strong>{row.day}</strong> : row.day}</td>
-                  <td>
-                    <span className={isUpcoming ? 'event-pill' : undefined}>
-                      {row.event}
-                    </span>
-                  </td>
-                  <td>{row.visarjan || isUpcoming ? <strong>{row.aarti}</strong> : row.aarti}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+        <div style={{ textAlign: 'center', padding: '40px 20px', fontSize: '1.3rem', fontWeight: 700 }}>
+          TBA - To Be Announced...
+        </div>
       </div>
 
       <div className="special-event" data-reveal>
