@@ -1,6 +1,15 @@
 import { useEffect, useState } from 'react'
+import { getUtsavStart, formatDate } from '../utils/date'
 
-const FESTIVAL_DATE = new Date(2027, 8, 4, 19, 0, 0)
+const UTSAV_START = getUtsavStart()
+const FESTIVAL_DATE = new Date(
+  UTSAV_START.getFullYear(),
+  UTSAV_START.getMonth(),
+  UTSAV_START.getDate(),
+  19,
+  0,
+  0,
+)
 
 function getTimeLeft() {
   const difference = FESTIVAL_DATE.getTime() - Date.now()
@@ -46,7 +55,7 @@ export default function Countdown() {
           <h2 className="shimmer-text">⏳ Countdown to Bappa</h2>
           <p>Get ready to welcome Modi Park Cha Raja!</p>
           <strong className="arrival-date">
-            Aagman — 4 September 2027 • 7:00 PM
+            Aagman — {formatDate(UTSAV_START)} • 7:00 PM
           </strong>
         </div>
 

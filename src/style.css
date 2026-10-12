@@ -6581,3 +6581,142 @@ body.dark .aarti-add-form {
     background: var(--navy2);
 
 }
+
+.permissions-stale {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(200, 120, 0, 0.4);
+    background: rgba(244, 162, 97, 0.12);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.permissions-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.permissions-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 4px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.permissions-row-title {
+    margin: 0;
+    font-size: 1.05rem;
+    flex: 1 1 240px;
+}
+
+.permissions-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.permissions-btn {
+    padding: 10px 18px;
+    font-size: .85rem;
+}
+
+.preview-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.preview-panel {
+    position: relative;
+    width: min(100%, 760px);
+    margin: auto;
+    background: #ffffff;
+    color: #1a1a1a;
+    border-radius: 4px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    padding: 48px 56px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+.preview-panel--mr {
+    font-family: "Noto Sans Devanagari", "Nirmala UI", "Mangal", sans-serif;
+    line-height: 1.6;
+}
+
+.preview-close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #666;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.preview-tag {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    font-family: system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.preview-rule {
+    border: 0;
+    border-top: 1px solid #000;
+    margin: 12px 0 18px;
+}
+
+.preview-letterhead {
+    text-align: center;
+    margin: 0 0 4px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.preview-letterhead-lg {
+    font-size: 1.15rem;
+}
+
+.preview-date {
+    margin: 0 0 18px;
+}
+
+.preview-subject {
+    margin: 18px 0;
+}
+
+.preview-paragraph {
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+.preview-fromto {
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.preview-signature {
+    margin: 16px 0 4px;
+}
+
+.preview-text {
+    margin: 0 0 4px;
+}

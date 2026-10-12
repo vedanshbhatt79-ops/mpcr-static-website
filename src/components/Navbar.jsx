@@ -8,6 +8,7 @@ const links = [
   { to: '/gallery', label: 'Gallery' },
   { to: '/sponsors', label: 'Sponsors' },
   { to: '/social', label: 'Social' },
+  { to: '/permissions', label: 'Permissions' },
 ]
 
 export default function Navbar({ theme, onToggleTheme, authenticated, onLogout }) {
