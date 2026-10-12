@@ -32,6 +32,7 @@ export default function Events() {
         <span className="section-label">GANESHOTSAV 2026</span>
         <h2>Events & Programme</h2>
         <p>Celebrate, participate and create memories with Modi Park Cha Raja.</p>
+        <p style={{ marginTop: '10px', fontWeight: 700, fontSize: '1.1rem' }}>TBA - To Be Announced...</p>
       </div>
 
       <div className="special-event aagman-event" data-reveal>
