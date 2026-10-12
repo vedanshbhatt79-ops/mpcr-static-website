@@ -1,8 +1,12 @@
+import { getUtsavStart, formatDate, weekday } from '../utils/date'
+
 export default function Events() {
+  const utsavStart = getUtsavStart()
+
   return (
     <section id="events" className="section events-section">
       <div className="section-heading" data-reveal>
-        <span className="section-label">GANESHOTSAV 2026</span>
+        <span className="section-label">GANESHOTSAV {utsavStart.getFullYear()}</span>
         <h2>Events & Programme</h2>
         <p>Celebrate, participate and create memories with Modi Park Cha Raja.</p>
         <p style={{ marginTop: '10px', fontWeight: 700, fontSize: '1.1rem' }}>TBA - To Be Announced...</p>
@@ -11,7 +15,7 @@ export default function Events() {
       <div className="special-event aagman-event" data-reveal>
         <div className="special-icon">🥁</div>
         <div>
-          <span>SATURDAY • 4 SEPTEMBER 2027</span>
+          <span>{weekday(utsavStart).toUpperCase()} • {formatDate(utsavStart).toUpperCase()}</span>
           <h3>Bappa's Grand Aagman</h3>
           <p>The arrival of our beloved Bappa will begin from Anand Nagar.</p>
           <div className="event-info-line">
