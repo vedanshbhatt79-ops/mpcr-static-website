@@ -135,10 +135,13 @@ export async function downloadPdf(letter, filename) {
 
   const container = document.createElement('div')
   container.setAttribute('lang', isMr ? 'mr' : 'en')
-  container.style.position = 'absolute'
+  container.style.position = 'fixed'
   container.style.top = '0'
-  container.style.left = '-10000px'
+  container.style.left = '0'
   container.style.width = '164mm'
+  container.style.opacity = '0'
+  container.style.pointerEvents = 'none'
+  container.style.zIndex = '-1'
   container.style.background = '#ffffff'
   container.style.color = '#000000'
   container.style.fontFamily = isMr ? HTML_FONT_MR : HTML_FONT_EN
@@ -156,11 +159,12 @@ export async function downloadPdf(letter, filename) {
         document.fonts.load('700 12pt "Noto Sans Devanagari"'),
       ])
     }
+    await new Promise((r) => setTimeout(r, 50))
 
     const blob = await html2pdf()
       .set({
         margin: [20, 23, 20, 23],
-        html2canvas: { scale: 2, backgroundColor: '#ffffff' },
+        html2canvas: { scale: 2, backgroundColor: '#ffffff', useCORS: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
         pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
       })
